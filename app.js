@@ -18,7 +18,7 @@ const config = {
   authentication: {
     type: 'default',
     options: {
-      userName: 'arup@eration', // must be a string, include @server for Azure SQL
+      userName: 'arup@eration-prod', // must be a string, include @server for Azure SQL
       password: 'Alexasiri699@' // must be a string, but don't expose passwords like this in code
     }
   },
