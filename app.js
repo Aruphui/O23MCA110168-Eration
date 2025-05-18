@@ -14,7 +14,7 @@ const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "adminpass";
 
 // Azure SQL Database Connection Configuration
 const config = {
-  server: 'eration.database.windows.net', // must be a string
+  server: 'eration-prod.database.windows.net', // must be a string
   authentication: {
     type: 'default',
     options: {

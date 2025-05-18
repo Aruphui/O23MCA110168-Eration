@@ -1,0 +1,26 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: node:20
+  script:
+    - apt-get update && apt-get install -y zip
+    - npm install
+    - mkdir -p build/artifact
+    - cp -r $(ls | grep -v build) build/artifact
+    - cd build/artifact
+    - zip -r ../app.zip .
+  artifacts:
+    paths:
+      - build/app.zip
+
+deploy:
+  stage: deploy
+  image: mcr.microsoft.com/azure-cli
+  script:
+    - az login --service-principal --username $client_id --password $client_secret --tenant $tenant_id
+    - az webapp deploy --resource-group Alert-RG --name eration --src-path build/app.zip --type zip
+  dependencies:
+    - build
