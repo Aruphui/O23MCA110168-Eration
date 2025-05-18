@@ -1,0 +1,21 @@
+{
+  "name": "ration-booking",
+  "version": "1.0.0",
+  "description": "Ration Slot Booking Application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "tedious": "^15.1.3"
+  }
+}

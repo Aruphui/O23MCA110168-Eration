@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDS Slot Booking Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>ମା’ ବାସୁଳୀ ସ୍ବୟଂ ସହାୟକ ଗୋଷ୍ଠୀ</h1>
+    <p>ସୁଗମ ଏବଂ ସ୍ୱଚ୍ଛ ରାସନ ବଣ୍ଟନ ମାଧ୍ୟମରେ ନାଗରିକମାନଙ୍କୁ ସଶକ୍ତ କରିବା ପାଇଁ ଏହା ଏକ ପ୍ଲାଟଫର୍ମ</p>
+    <p>ଏଠାରେ ଆପଣ ବୁକ୍ କରି ଲମ୍ବା ଧାଡି ଛାଡିବା ପାଇଁ ସୁବିଧା ମିଳିବ। ଏହି ସେବା ଦ୍ୱାରା, ନାଗରିକମାନେ ସମୟ ଏବଂ ଶ୍ରମ ସଞ୍ଚୟ କରିବେ, କାରଣ ଏହା ସହଜ ତଥା ଆସାନ ବଣ୍ଟନ ପ୍ରକ୍ରିୟାରେ ସାହାଯ୍ୟ କରେ।</p>
+    <p>କୃପୟା, ଆମ ସେବାକୁ ଉପଭୋଗ କରନ୍ତୁ ଏବଂ ନିଜର ଅଭିଯୋଗ ଓ ସୁଝାବ ଆମକୁ କୁହନ୍ତୁ।</p>
+  </header>
+
+  <div class="container">
+    <!-- Authentication Section -->
+    <div id="auth" class="card" style="display: block;">
+      <h2>Login / Register</h2>
+      <div id="loginForm">
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="login()">Login</button>
+        <button onclick="showRegister()">Register</button>
+      </div>
+
+      <div id="registrationForm" style="display: none;">
+        <input type="text" id="reg-username" placeholder="Enter Username" />
+        <input type="password" id="reg-password" placeholder="Enter Password" />
+        <input type="password" id="confirm-password" placeholder="Confirm Password" />
+        <button onclick="register()">Submit Registration</button>
+        <button onclick="showLogin()">Back to Login</button>
+      </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard" class="card" style="display: none;">
+      <h2>Welcome, <span id="welcomeUsername"></span>!</h2>
+      <p>Your Booked Slot: <span id="bookedSlotDetails">None</span></p>
+      <button id="logoutButton" onclick="logout()">Logout</button>
+
+      <h3>Available Slots</h3>
+      <div id="slotList" class="slot-container"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 Maa Basuli SHG. All Rights Reserved.</p>
+    <p>Helpline: <strong>+91-XXXXXXXXXX</strong></p>
+  </footer>
+</body>
+</html>

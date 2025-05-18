@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="adminStyle.css"> <!-- Link to admin CSS -->
+  <script defer src="adminScript.js"></script>
+</head>
+<body>
+  <div id="adminLogin">
+    <h2>Admin Login</h2>
+    <input type="password" id="adminPassword" placeholder="Admin Password" />
+    <button onclick="adminLogin()">Login</button>
+  </div>
+
+  <div id="bookedSlots" style="display: none;">
+    <h2>Booked Slots</h2>
+    <ul id="slotList"></ul>
+  </div>
+</body>
+</html>
